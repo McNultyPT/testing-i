@@ -66,4 +66,18 @@ describe('fail()', () => {
     })
 })
 
+describe('get()', () => {
+    it('if enhancement is greater than 0 modify the name to include enhancement level', () => {
+        expect(enhancer.get({
+            name: 'sword',
+            durability: 50,
+            enhancement: 15
+        })).toEqual({
+            name: '[+15] sword',
+            durability: 50,
+            enhancement: 15
+        })
+    })
+})
+
 
