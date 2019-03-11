@@ -14,17 +14,7 @@ function fail(item) {
 }
 
 function repair(item) {
-  let items = {
-    name: 'item',
-    durability: 50,
-    enhancement: 20
-  };
-
-  const newItem = Object.keys(items).map(item => {
-    item.durability = 100;
-  });
-  
-  return { newItem };
+  return { ...item, durability: 100 };
 }
 
 function get(item) {
